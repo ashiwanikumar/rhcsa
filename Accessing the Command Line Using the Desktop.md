@@ -10,6 +10,7 @@ Ensure that the workstation virtual machine is running. Perform the following ta
 
  1. Log in to workstation as student using student as the password.
 
-               1.1 On workstation, at the GNOME login screen, click the student user account. Enter student when prompted for the password.
+               1.1 On workstation, at the GNOME login screen, click the student user account. 
+                   Enter student when prompted for the password.
                1.2 Click Sign In.
 
