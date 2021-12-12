@@ -4,7 +4,8 @@ In this exercise, you will log in through the graphical display manager as a reg
 
 #### Outcomes
 
-Log in to your cloud machine  as kiosk using pa55#AQ as the password. 
+Log in to your cloud machine  [Access Cloud Server ](https://lab.redhat.com/sandbox)
+ 
 
 
 To print the present working directory. Run **`pwd`** command
