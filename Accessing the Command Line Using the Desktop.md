@@ -4,7 +4,7 @@ In this exercise, you will log in through the graphical display manager as a reg
 
 #### Outcomes
 
-Log in to your cloud machine  [Access Cloud Server ](https://lab.redhat.com/sandbox)
+[Access your cloud machine in new tab  ](https://lab.redhat.com/sandbox)
  
 
 
