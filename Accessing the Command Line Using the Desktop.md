@@ -3,8 +3,9 @@
 In this exercise, you will log in through the graphical display manager as a regular user to become familiar with the GNOME Standard desktop environment provided by GNOME 3.
 
 #### Outcomes
+Access your cloud machine 
 
-[Access your cloud machine in new tab  ](https://lab.redhat.com/sandbox)
+[Click here to access lab ](https://lab.redhat.com/sandbox)
  
 
 
