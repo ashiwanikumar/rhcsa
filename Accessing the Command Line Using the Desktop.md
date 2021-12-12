@@ -9,49 +9,48 @@ Log in to your cloud machine  as kiosk using pa55#AQ as the password.
 
 To print the present working directory. Run **`pwd`** command
 ```
-$ pwd
+# pwd
 ```
 
 To see the contents of the directory. Run **`ls`** command
 ```
-$ ls 
+# ls 
 ````
 
 To make (or) create a directory. Run **`mkdir`** command
 ```
-$ mkdir Asia
+# mkdir Asia
 ```
 
 To make (or) create multiple directories. Run **`mkdir`** command followed by **`<directory_name1> <directory_name2> .. <directory_nameN>`**
 ```
-$ mkdir Europe Africa America
+# mkdir Europe Africa America
 ```
 
 To change a directory from the current directory. Run **`cd <directory_name>`**
 ```
-$ cd Asia
+# cd Asia
 ```
 
 To recursively created directories. Run **`mkdir -p <directory_name1>/<sub_directory_of_name1>`**
 ```
-$ mkdir -p India/Mumbai
+# mkdir -p India/Mumbai
 ```
 
 To go back to one directory up. Run **`cd ..`**
 ```
-$ cd ..
+# cd ..
 ```
 
 To go back directly to a home directory of the current user from any location in the system. Run **`cd`**
 ```
-$ cd
+# cd
 ```
 
 #### Lets now look at absolute path and relative path
 
 
 
-![Absolute_and_relative_path_working_with_shell_I](../../images/Absolute_and_relative_path_working_with_shell_I.PNG)
 
 **Difference Between Absolute and Relative Path**
 
@@ -60,12 +59,12 @@ $ cd
 
 To change to a directory with absolute path. Run **`cd <directory_path>`**
 ```
-$ cd /home/kiosk
+# cd /root
 ```
 
 To Change to a directory with relative path. Run **`cd <directoryName>`**
 ```
-$ cd Asia
+# cd Asia
 ```
 
 #### Lets now take a look at alternatives to the **`cd`** command
@@ -73,96 +72,95 @@ $ cd Asia
 
 Alternative to the **`cd`** is the **`pushd\popd`** command. To change directory using pushd, run **`pushd <directory_name>`**
 ```
-$ pushd /etc
+# pushd /etc
 ```
 
 You can change to subdirecties under /etc as many times as you wish
 ```
-$ pushd /var
-$ pushd /tmp
-$ pwd
+# pushd /var
+# pushd /tmp
+# pwd
 /etc/var/tmp
 ```
 
 To return back to origin directory(say your home directory), use the **`popd`** command
 ```
-$ popd
+# popd
 ```
 
 #### Now lets move on to look some more basic commands in linux. To learn these commands we will make use of the same directory structure as before, however now there are some new files and directories added as shown in the diagram. The goal of this task is to make sure the directory structure looks like the below diagram .
 
-![before_after_commands](../../images/before_after_commands.PNG)
 
 To move file or directory. Run **`mv <source> <destination>`** command
 ```
-$ mv /home/kiosk/Europe/Morocco /home/kiosk/Africa/ (Absolute path)
-$ mv Europe/Morocco Africa/ (Relative Path)
+# mv /root/Europe/Morocco /root/Africa/ (Absolute path)
+# mv Europe/Morocco Africa/ (Relative Path)
 ```
 
 To rename a directory. Run **`mv <oldname> <newname>`** command
 ```
-$ mv Asia/India/Munbai Asia/India/Mumbai
+# mv Asia/India/Munbai Asia/India/Mumbai
 ```
 
 To copy a file to a directory. Run **`cp <filename> <destination_directorypath>`** command
 ```
-$ cp Asia/India/Mumbai/City.txt Africa/Egypt/Cairo
+# cp Asia/India/Mumbai/City.txt Africa/Egypt/Cairo
 ```
 
 To delete a file from a directory. Run **`rm /path/<filename>`** command
 ```
-$ rm Europe/UK/London/Tottenham.txt
+# rm Europe/UK/London/Tottenham.txt
 ```
 
 To copy a directory recursively. Run **`cp -r <sourcepath> <destinationPath>`** command
 ```
-$ cp -r Europe/UK Europe/UnitedKingdom
+# cp -r Europe/UK Europe/UnitedKingdom
 ```
 
 To print the content of a file. Run **`cat /path/to/<filename>`** command
 ```
-$ cat Asia/India/Mumbai/City.txt
+# cat Asia/India/Mumbai/City.txt
 ```
 
 To add a content to a file with cat(redirect) . Run **`cat > /path/to/<filename>`** command
 ```
-$ cat > Africa/Egypt/Cairo/City.txt
+# cat > Africa/Egypt/Cairo/City.txt
   Cairo
   `Type Ctrl + d from keyboard`
 ```
 
 To create an empty file. Run **`touch /path/to/filename`** command
 ```
-$ touch /home/kiosk/Asia/China/Country.txt
+# touch /root/Asia/China/Country.txt
 ```
 
 To see the content of a file in a scrollable manner. Run **`more /path/to/filename`** command <-- not recommended for large files
 ```
-$ more /etc/services
+# more /etc/services
 ```
 
 To see the content of a file and navigate throught the file. Run **`less /path/to/filename`** command
 ```
-$ less /etc/services
+# less /etc/services
 ```
 
 To get the long list of files and directories. Run **`ls -l`** command
 ```
-$ ls -l
+# ls -l
 ```
 
 To list all files including the hidden. Run **`ls -la`** command
 ```
-$ ls -a
+# ls -a
 ```
 
 To list all the files in the order they were modified. Run **`ls -lt`** command
 ```
-$ ls -lt
+# ls -lt
 ```
 
 To list all the files form oldest to newest. Run **`ls -ltr`** command
 ```
-$ ls -ltr
+# ls -ltr
 ```
 
