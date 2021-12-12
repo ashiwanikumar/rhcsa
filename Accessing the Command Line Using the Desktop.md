@@ -1,4 +1,4 @@
-Guided Exercise: Accessing the Command Line Using the Desktop
+# Guided Exercise: Accessing the Command Line Using the Desktop
 
 In this exercise, you will log in through the graphical display manager as a regular user to become familiar with the GNOME Standard desktop environment provided by GNOME 3.
 
