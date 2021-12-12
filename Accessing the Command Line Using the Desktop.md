@@ -138,12 +138,12 @@ $ touch /home/kiosk/Asia/China/Country.txt
 
 To see the content of a file in a scrollable manner. Run **`more /path/to/filename`** command <-- not recommended for large files
 ```
-$ more new_file.txt
+$ more /etc/services
 ```
 
 To see the content of a file and navigate throught the file. Run **`less /path/to/filename`** command
 ```
-$ less new_file.txt
+$ less /etc/services
 ```
 
 To get the long list of files and directories. Run **`ls -l`** command
