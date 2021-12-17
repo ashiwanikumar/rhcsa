@@ -1,0 +1,8 @@
+---
+ - name: lab files-manage start
+   hosts: localhost
+   connection: local
+   tasks:
+    - name: remove all files from /home/student
+      file:
+       shell: rm -rf /home/student/*

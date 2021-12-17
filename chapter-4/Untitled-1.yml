@@ -1,0 +1,36 @@
+
+ run the lab files-manage-start command.. 
+
+1. In the student user's home directory, use the mkdir command to create three subdirectories: Music, Pictures, and Videos. 
+2. Continuing in the student user's home directory, use the touch command to create sets of empty practice files to use during this lab.
+    Create six files with names of the form songX.mp3.  
+    Create six files with names of the form snapX.jpg.
+    Create six files with names of the form filmX.avi. 
+   In each set, replace X with the numbers 1 through 6. 
+
+3. Continuing in the student user's home directory, move the song files to the Music subdirectory, the snapshot files to the Pictures subdirectory, and the movie files to the Videos subdirectory. 
+   
+   When distributing files from one location to many locations, first change to the directory containing the source files. Use the simplest path syntax, absolute or relative, to reach the destination for each file management task. 
+
+4. Continuing in the student user's home directory, create three subdirectories for organizing your files into projects. Name the subdirectories friends, family, and work. Use a single command to create all three subdirectories at the same time. 
+   You will use these directories to rearrange your files into projects. 
+
+
+5. Copy a selection of new files to the project directories family and friends. Use as many commands as needed. You do not have to use only one command as in the example. For each project, first change to the project directory, then copy the source files to this directory. Keep in mind that you are making copies, therefore the original files will remain in their original locations after the files are copied to the project directories. 
+    Copy files (all types) containing the numbers 1 and 2 in to the friends subdirectory.
+    Copy files (all types) containing the numbers 3 and 4 in to the family subdirectory. 
+   When copying files from multiple locations into a single location, Red Hat recommends that you change to the destination directory prior to copying the files. Use the simplest path syntax, absolute or relative, to reach the source for each file management task. 
+
+6. For your work project, create additional copies. 
+       
+7. Your project tasks are now complete, and it is time to clean up the projects. 
+   Change to the student user's home directory. Attempt to delete both the family and friends project directories with a single rmdir command. 
+   Using the rmdir command should fail because both subdirectories contain files. 
+   
+8. Use the rm -r command to recursively delete both the family and friends subdirectories and their contents. 
+
+9. Delete all the files in the work project, but do not delete the work directory. 
+            
+10.Finally, from the student user's home directory, use the rmdir command to delete the work directory. The command should succeed now that it is empty. 
+
+11. run the lab files-manage-finish script to finish this exercise. The script will remove all directories and files created during this exercise. 
