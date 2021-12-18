@@ -1,6 +1,6 @@
 ## CONTROLLING NEW FILE PERMISSIONS AND OWNERSHIP
 
-
+""
 1. Log in as alice on your serverX virtual machine and open a window with a Bash prompt.
 Use the umask command without arguments to display Alice's default umask value.
 
