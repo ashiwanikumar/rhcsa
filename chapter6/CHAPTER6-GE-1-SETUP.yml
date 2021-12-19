@@ -1,0 +1,21 @@
+---
+ - name: Managin File security
+   hosts: localhost
+   connection: local
+   tasks:
+    - name: create group ulca
+      group:
+       name: ulca
+       state: present
+    - name: create users
+      user:
+       - blob
+       - s3
+      groups: ulca   
+      state: present
+    - name: set blob and s3 password 
+      shell: "{ item }}"
+      loop:
+       - echo 'password' | password --stdin blob
+       - echo 'password' | password --stdin s3
+         

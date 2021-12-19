@@ -1,0 +1,173 @@
+----CHAPTER 6 | Controlling Access to Files with Linux File System Permissions----
+
+GUIDED EXERCISE --1
+
+  # MANAGING FILE SECURITY FROM THE COMMAND LINE 
+
+
+ * NOTE *
+     The chmod command supports the -R option to recursively set permissions on
+     the files in an entire directory tree. When using the -R option, it can be useful to
+     set permissions symbolically using the X flag. This will allow the execute (search)
+     permission to be set on directories so that their contents can be accessed, without 
+     changing permissions on most files. But be cautious. If a file has any execute
+     permission set, X will set the specified execute permission on that file as well. For
+     example, the following command will recursively set read and write access on
+     demodir and all its children for their group owner, but will only apply group execute
+     permissions to directories and files which already have execute set for user, group,
+     and/or other.
+   
+ * NOTE *
+     Instead of using chown, some users change the group ownership by using the
+     chgrp command; this command works exactly the same as changing ownership with
+     chown, including the use of -R to affect entire directory trees.
+
+ * REFERENCES *
+           ls(1), chmod(1), chown(1), and chgrp(1) .  
+
+
+	YOUR QUESTION STARTS :-
+	
+	OBJECTIVE --   In this lab, you will create a collaborative directory for pre-existing users.
+                    A directory accessible by all members of the ulca group and a file created by blob that can
+                    be modified by s3.
+          
+           
+	1. Open the link to get the terminal to solve this scenerio.
+
+	2. Become the root user at the shell prompt.
+
+	3. Run lab permissions setup which will create a shared group, ulca, with two new
+           users, blob and s3. The password for these accounts is password.
+           lab file-security-start
+
+	4. Create a directory in /home called ulca-text.
+
+	5. Change the group ownership of the ulca-text directory to ulca.
+
+	6. Ensure the permissions of ulca-text allows group members to create and delete files.
+
+	7. Ensure the permissions of ulca-text forbids others from accessing its files.
+
+	8. Exit the root shell and switch to the user blob with a password of password.
+
+	9. Navigate to the /home/ulca-text folder (remember to open a terminal window first).
+
+	10. Create an empty file called blobfile3.
+
+	11. Record the default user and group ownership of the new file and its permissions.
+
+	12. Change the group ownership of the new file to ulca and record the new ownership and
+            permissions
+ 
+	13. Exit the shell and switch to the user s3 with a password of password.
+
+	14. Navigate to the /home/ulca-text folder
+
+	15. Determine s3's privileges to access and/or modify blobfile3. 
+
+
+ 
+                                                        
+      			**************************************************************
+						      END 
+
+
+GUIDED EXERCISE --2 
+   
+    # CONTROLLING NEW FILE PERMISSIONS AND OWNERSHIP
+
+
+  * NOTE *
+	Other shells, such as tcsh, may have different system default initialization files in /
+        etc and users' home directories.     
+
+  * REFERENCES *
+            bash(1), ls(1), chmod(1), and umask(1) . 
+
+
+	YOUR QUESTION STARTS :- 
+
+       	OBJECTIVE --  In this lab, you will control default permissions on new files using the umask command and
+                      setgid permission.
+		      • Create a shared directory where new files are automatically owned by the group ulca.
+                      • Experiment with various umask settings.
+                      • Adjust default permissions for specific users.
+                      • Confirm your adjustment is correct.
+
+
+	1. Click the given link to get terminal . Run lab permissions setup to create the s3 account. 
+           The password for s3 is password.
+
+	2. Log in as s3 on your serverX virtual machine and open a window with a Bash prompt.
+           Use the umask command without arguments to display s3's default umask value. 
+
+	3. Create a new directory /tmp/shared and a new file /tmp/shared/defaults to see how
+           the default umask affects permissions.
+ 
+	4. Change the group ownership of /tmp/shared to ulca and record the new ownership and permissions.
+
+	5. Create a new file in /tmp/shared and record the ownership and permission. 
+
+	6. Ensure the permissions of /tmp/shared cause files created in that directory to inherit the
+           group ownership of ulca.
+
+	7. Change the umask for s3 such that new files are created with read-only access for the 
+           group and no access for other users. Create a new file and record the ownership and permissions.
+
+	8. Open a new Bash shell as s3 and view the umask.
+
+	9. Change the default umask for s3 to prohibit all access for users not in their group.
+
+	10. Log out and back into serverX as s3 and confirm that the umask changes you made
+            are persistent.
+
+   
+                                                    
+			************************************************************
+						     END 
+
+
+
+PRACTISE YOURSELF ---> 
+
+     # CONTROLLING ACCESS TO FILES WITH LINUX FILE SYSTEM PERMISSIONS 
+
+
+	YOUR QUESTION STARTS :- 
+
+	OBJECTIVE --  In this lab, you will configure a system with directories for user collaboration.
+	 	      • A directory on serverX called /home/stooges where these three users can work
+                        collaboratively on files.
+                      • Only the user and group access, create, and delete files in /home/stooges. Files created
+                        in this directory should automatically be assigned a group ownership of stooges.
+                      • New files created by users will not be accessible outside of the group.
+
+	
+	1. Open the given link to open your lab terminal. Run lab permissions setup . 
+	   Your serverX machine has three accounts, curly, larry, and moe, who are members of a group
+	   called stooges. The password for each account is password
+
+	2. Open a terminal window and become root on serverX.
+
+	3. Create the /home/stooges directory.
+
+	4. Change group permissions on the /home/stooges directory so it belongs to the stooges
+	   group.
+
+	5. Set permissions on the /home/stooges directory so it is a set GID bit directory (2), the
+	   owner (7) and group (7) have full read/write/execute permissions, and other users have no
+	   permission (0) to the directory.
+
+  	6. Check that the permissions were set properly.
+
+	7. Modify the global login scripts so that normal users have a umask setting which prevents
+       	   others from viewing or modifying new files and directories.
+
+	8. When you finish, open a terminal window on serverX and run lab permissions grade to
+	   confirm you have done everything correctly.
+
+
+						     
+			***********************************************************
+						     END

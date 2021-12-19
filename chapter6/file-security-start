@@ -1,0 +1,4 @@
+#!/bin/bash
+playbook_path=
+ansible-playbook -i $playbook_path/CHAPTER6-GE-1-SETUP.yml
+echo DONE 
