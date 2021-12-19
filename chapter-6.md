@@ -25,3 +25,5 @@ permissions.
 
 9. Log out and back into serverX as alice and confirm that the umask changes you made
 are persistent
+
+1
